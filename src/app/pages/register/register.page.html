@@ -1,0 +1,102 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="">Register</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="img">
+        <img alt="logo" src="assets\rc.png" >
+      </div>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title color="success">What do you want to do the recyclabe waset? </ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-radio-group [allowEmptySelection]="true" value="turtles">
+     <ion-radio slot="start" value="CLIENT" >Do You want to BUY  </ion-radio><br />
+     <ion-radio slot="start" value="PARTNER" >Do You want to SELL</ion-radio><br />
+     </ion-radio-group>
+  </ion-card-content>
+</ion-card>
+
+ <ion-card-content>
+  <ion-card-title color="">Contact</ion-card-title>
+    <ion-item>
+    <ion-input label=" your name" labelPlacement="floating" placeholder="Enter your Email">
+    </ion-input>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label=" Email" labelPlacement="floating" placeholder="Enter your Email">
+    </ion-input>
+    <ion-input type="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Password" labelPlacement="floating" placeholder="Enter your Password">
+    </ion-input>
+    <ion-input type="Password"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Confrim Password" labelPlacement="floating" placeholder="Comfrim your Password">
+    </ion-input>
+    <ion-input type="Password"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Phone number" labelPlacement="floating" placeholder="Enter your phone number">
+    </ion-input>
+    <ion-input type="tel"></ion-input>
+  </ion-item>
+   </ion-card-content>
+
+
+ <ion-card-content>
+  <ion-card-title color="success">Addres Information </ion-card-title>
+  <ion-item>
+    <ion-input label=" Address" labelPlacement="floating" placeholder="Enter your Address">
+    </ion-input>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+    <ion-item>
+    <ion-input label=" Number" labelPlacement="floating" placeholder="Enter your Number">
+    </ion-input>
+    <ion-input type="tel"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label=" Neighborhood" labelPlacement="floating" placeholder="name">
+    </ion-input>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Zip Code" labelPlacement="floating" placeholder="Enter your Zip code">
+    </ion-input>
+    <ion-input type="tel"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="state" labelPlacement="floating" placeholder="where your state ">
+    </ion-input>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="City" labelPlacement="floating" placeholder="Enter your phone City">
+    </ion-input>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+   </ion-card-content>
+
+
+  <ion-button fill="clear" size="full" >Register</ion-button>
+
+
+</ion-content>

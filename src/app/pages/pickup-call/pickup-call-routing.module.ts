@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PikupPage } from './pickup.page';
+import { PickupCallPage } from './pickup-call.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: PikupPage
+    component: PickupCallPage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class PikupPageRoutingModule {}
+export class PickupCallPageRoutingModule {}

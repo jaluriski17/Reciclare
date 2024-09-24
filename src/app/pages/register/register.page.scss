@@ -5,3 +5,9 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+ion-content {
+  --background: var(--ion-color-success);
+}
+ion-button {
+  margin: 10px;
+}

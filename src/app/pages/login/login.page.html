@@ -1,32 +1,49 @@
+<ion-content>
   <div class="flex-center">
-    <ion-card>
-      <div class="c2">
-      </div>
-      <div class="img">
-        <img alt="logo" src="assets\rc.png" />
-      </div>
-  <ion-card-header>
-    <ion-card-title color="success">Welcome</ion-card-title>
-    <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
-  </ion-card-header>
+    <form [formGroup]="form">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title color="success">Reciclica</ion-card-title>
+        </ion-card-header>
 
-  <ion-card-content>
-    <ion-item>
-    <ion-input label="Enter your Email " labelPlacement="floating" placeholder="Enter Email">
-    </ion-input>
-    <ion-input type="email"></ion-input>
-  </ion-item>
+        <ion-card-content>
 
-  <ion-item>
-    <ion-input label="Enter your Password " labelPlacement="floating" placeholder="Enter Password">
-    </ion-input>
-    <ion-input type="Password"></ion-input>
-  </ion-item>
+          <ion-item>
+            <ion-input label="Email" labelPlacement="floating" placeholder="Enter text" type="email"
+              formControlName="email">
+            </ion-input>
+          </ion-item>
 
-  <ion-button fill="clear" size="full" >Forgat Password</ion-button>
-  <ion-button fill="clear"size="full">Login</ion-button>
+          <!-- Correcting the attribute binding -->
+          <app-error-message message="Email is mandatory" [field]="form.get('email')" error="required">
+          </app-error-message>
+          <app-error-message message="Email is invalid" [field]="form.get('email')" error="email">
+          </app-error-message>
 
-  </ion-card-content>
-</ion-card>
+          <ion-item>
+            <ion-input label="Password" labelPlacement="floating" placeholder="Enter text" type="password"
+              formControlName="password">
+            </ion-input>
+          </ion-item>
+
+          <!-- Correcting the attribute binding -->
+          <app-error-message message="Password is mandatory" [field]="form.get('password')" error="required">
+          </app-error-message>
+
+          <ion-button color="dark" fill="clear" size="full" [disabled]="!form.get('email')?.valid" style="text-transform: none;"
+          (click)="forgotEmailPassword()" id="recoverPasswordButton">
+            Forgot Email/Password
+          </ion-button>
+          <ion-button color="success" size="full" [disabled]="!form.valid" (click)="loginUser()" id="loginButton">
+            Login
+          </ion-button>
+          <ion-button color="success" fill="clear" size="full" (click)="register()">
+            Register
+          </ion-button>
+
+        </ion-card-content>
+      </ion-card>
+    </form>
   </div>
+</ion-content>
 

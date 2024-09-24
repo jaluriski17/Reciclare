@@ -1,7 +1,7 @@
-.img{
-  width: 270px;
-  height: 150px;
-  padding-left: 70px;
+ion-button[color="primary"] {
+  text-transform: initial;
 }
 
-
+ion-content {
+  --background: var(--ion-color-success);
+}
